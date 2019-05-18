@@ -1,0 +1,98 @@
+canvas{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+}
+body {
+    overflow: hidden;
+    font-size: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+img{
+    height: 35px;
+    width: 35px;
+    margin: 0 10px;
+}
+ul li,
+ol li{
+    list-style: none;
+}
+.actions{
+    position: fixed;;
+    top: 20px;
+    left: 30px;
+}
+.actions #brush {
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+.actions.x #brush{
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+.actions.x #erease{
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+.actions #erease{
+    transform: scale(1.0);
+    transition: 0.3s;
+}
+.color{
+    position: fixed;
+    top: 100px;
+    left: 30px    
+}
+.color li{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 1px grey solid;
+}
+.color #black{
+    background: black;
+    transition: all 0.3s; 
+    cursor: pointer;
+}
+.color #red{
+    background: red;
+    transition: all 0.3s; 
+    cursor: pointer;  
+}
+.color #blue{
+    background: blue;
+    transition: all 0.3s; 
+    cursor: pointer;  
+}
+.color #yellow{
+    background: yellow;
+    transition: all 0.3s;
+    cursor: pointer;           
+}
+.color .action{
+    box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.7);
+     transform: scale(1.2); /* 放大1.2倍 */
+     cursor: pointer; 
+}
+ul{
+    position: fixed;
+    right: 30px;
+    top:30px;
+}
+#thin{
+    border-top: 4px black solid;
+    width: 40px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+#thick{
+    border-top: 8px black solid;
+    width: 40px;
+    border-radius: 15px;
+}
