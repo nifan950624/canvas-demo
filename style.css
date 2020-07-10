@@ -1,98 +1,144 @@
-canvas{
-    background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
+canvas {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background: white;
 }
+
 body {
-    overflow: hidden;
-    font-size: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-img{
-    height: 35px;
-    width: 35px;
-    margin: 0 10px;
+
+*::before, *::after {
+  padding: 0;
+  margin: 0;
 }
+
+img {
+  height: 35px;
+  width: 35px;
+  margin: 0 10px;
+}
+
 ul li,
-ol li{
-    list-style: none;
+ol li {
+  list-style: none;
 }
-.actions{
-    position: fixed;;
-    top: 20px;
-    left: 30px;
+
+.icon {
+  width: 2em;
+  height: 2em;
+  margin-right: 20px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  z-index: 100;
 }
-.actions #brush {
-    transform: scale(1.5);
-    transition: 0.3s;
+
+
+.tools {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  top: 0;
+  padding: 20px;
+  background: #f5f5f5;
+  z-index: 1000;
+  box-sizing: border-box;
 }
-.actions.x #brush{
-    transform: scale(1.0);
-    transition: 0.3s;
+
+#active {
+  flex: 0 0 224px;
 }
-.actions.x #erease{
-    transform: scale(1.5);
-    transition: 0.3s;
+
+.action {
+  display: flex;
 }
-.actions #erease{
-    transform: scale(1.0);
-    transition: 0.3s;
+
+.active #brush {
+  transform: scale(1.5);
+  transition: 0.3s;
 }
-.color{
-    position: fixed;
-    top: 100px;
-    left: 30px    
+
+.active.x #brush {
+  transform: scale(1.0);
+  transition: 0.3s;
 }
-.color li{
-    height: 30px;
-    width: 30px;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    border: 1px grey solid;
+
+.active.x #erease {
+  transform: scale(1.5);
+  transition: 0.3s;
 }
-.color #black{
-    background: black;
-    transition: all 0.3s; 
-    cursor: pointer;
+
+.active #erease {
+  transform: scale(1.0);
+  transition: 0.3s;
 }
-.color #red{
-    background: red;
-    transition: all 0.3s; 
-    cursor: pointer;  
+
+.color {
+  display: flex;
+  flex: 1;
 }
-.color #blue{
-    background: blue;
-    transition: all 0.3s; 
-    cursor: pointer;  
+
+.color li {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 1px grey solid;
 }
-.color #yellow{
-    background: yellow;
-    transition: all 0.3s;
-    cursor: pointer;           
+
+.color #black {
+  background: black;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-.color .action{
-    box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.7);
-     transform: scale(1.2); /* 放大1.2倍 */
-     cursor: pointer; 
+
+.color #red {
+  background: red;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-ul{
-    position: fixed;
-    right: 30px;
-    top:30px;
+
+.color #blue {
+  background: blue;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-#thin{
-    border-top: 4px black solid;
-    width: 40px;
-    margin-bottom: 20px;
-    border-radius: 30px;
+
+.color #yellow {
+  background: yellow;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-#thick{
-    border-top: 8px black solid;
-    width: 40px;
-    border-radius: 15px;
+
+.color .action {
+  box-shadow: 0 0 0 2px rgba(170, 170, 170, 0.7);
+  transform: scale(1.2); /* 放大1.2倍 */
+  cursor: pointer;
+}
+
+#thin {
+  border-top: 4px black solid;
+  width: 40px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+#thick {
+  border-top: 8px black solid;
+  width: 40px;
+  border-radius: 15px;
 }

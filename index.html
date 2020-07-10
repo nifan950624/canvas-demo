@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable = no,maximum-scale =1.0,minimum-scale = 1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>canvas画板</title>
-    <link rel="stylesheet" href="./style.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0,user-scalable = no,maximum-scale =1.0,minimum-scale = 1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>canvas画板</title>
+  <script src="font/iconfont.js"></script>
+  <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <canvas id="xxx">               
-    </canvas>
-    <div id = "action" class="actions">          
-        <img id = "brush" src="./pic/icons8-笔刷-80.png" alt="brush">
-        <img id = "erease" src="./pic/icons8-橡皮-80.png" alt="erease">
-        <img style = "cursor: pointer" id =  "delet" src=  "./pic/icons8-垃圾-32.png" alt="delet">
-        <img style = "cursor: pointer" id=   "save" src="./pic/icons8-另存为-26.png" alt="save">
-    </div>
-        <ol class="color">
-                <li id="black" class="action"></li>
-                <li id="red"></li>
-                <li id="blue"></li>
-                <li id="yellow"></li>
-        </ol> 
-        <ul>
-            <li id = "thin"></li>
-            <li id = "thick"></li>
-        </ul>
+<canvas id="xxx">
+</canvas>
+<div class="tools">
+  <div class="active" id="active">
+    <svg aria-hidden="true" class="icon" id="brush">
+      <use xlink:href="#icon-qianbi"></use>
+    </svg>
+    <svg aria-hidden="true" class="icon" id="erease">
+      <use xlink:href="#icon-xiangpica"></use>
+    </svg>
+    <svg aria-hidden="true" class="icon" id="delet">
+      <use xlink:href="#icon-shuazi"></use>
+    </svg>
+    <svg aria-hidden="true" class="icon" id="save">
+      <use xlink:href="#icon-download"></use>
+    </svg>
+  </div>
+  <ol class="color">
+    <li class="action" id="black"></li>
+    <li id="red"></li>
+    <li id="blue"></li>
+    <li id="yellow"></li>
+  </ol>
+  <ul>
+    <li id="thin"></li>
+    <li id="thick"></li>
+  </ul>
+</div>
 </body>
-    <script src="./main.js">   
-    </script>
+<script src="./main.js">
+</script>
 </html>

@@ -1,0 +1,37 @@
+{
+  "id": "1935402",
+  "name": "canvas",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5173342",
+      "name": "铅笔",
+      "font_class": "qianbi",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5173346",
+      "name": "刷子",
+      "font_class": "shuazi",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5173361",
+      "name": "橡皮擦",
+      "font_class": "xiangpica",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "6367956",
+      "name": "下载",
+      "font_class": "download",
+      "unicode": "e662",
+      "unicode_decimal": 58978
+    }
+  ]
+}
